@@ -86,6 +86,8 @@ img {
 }
 
 .btn {
+  min-width: 160px;
+  height: 40px;
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -93,6 +95,9 @@ img {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  background-color: transparent;
 }
 
 .title {
@@ -115,6 +120,28 @@ img {
   padding-bottom: 32px;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-navigation {
+  margin-right: auto;
+}
+
+.header-logo {
+  margin-right: 130px;
+}
+
+.header-list {
+  display: flex;
+  gap: 30px;
+}
+
+/* .header-item:not(:last-child) {
+  margin-right: 30px;
+} */
+
 .header-link {
   font-weight: 600;
   font-size: 12px;
@@ -125,7 +152,7 @@ img {
 
 .header-tel {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -134,13 +161,26 @@ img {
 
 .header-btn {
   color: var(--first-btn-color);
+  margin-left: 43px;
 }
 
 /* -------------HERO -------------*/
 
 .hero {
+}
+
+.hero-container {
+  display: flex;
+}
+
+.hero-wrap {
   background-color: #726d6d;
   padding: 272px 100px 208px;
+  flex-grow: 1;
+}
+
+.hero-list {
+  width: 100px;
 }
 
 .hero-link {
@@ -174,6 +214,20 @@ img {
 }
 
 /* -------------ABOUT -------------*/
+
+.about-container {
+  display: flex;
+  gap: 30px;
+}
+
+.about-wrap {
+  max-width: 470px;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
 
 .about-pre-title {
   color: #303030;
@@ -215,13 +269,24 @@ img {
   color: var(--first-title-color);
   margin-bottom: 44px;
 }
+
+.prices-wrap {
+  display: flex;
+  gap: 30px;
+}
 .prices-list {
   border: 1px solid #ffffff;
   padding: 30px 20px;
+  width: calc((100% - 30px) / 2);
 }
 
 .prices-item {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices-item + .prices-item {
+  margin-top: 20px;
 }
 
 .prices-item-text {
@@ -232,7 +297,7 @@ img {
 }
 
 .prices-btn {
-  color: var(--title-color);
+  color: var(--first-btn-color);
   margin: 0 auto;
   display: block;
   margin-top: 44px;
@@ -242,7 +307,22 @@ img {
 
 .benefits {
 }
+
+.benefits-continer {
+  display: flex;
+  padding-left: 115px;
+  padding-right: 85px;
+  gap: 130px;
+}
+
+.benefits-wrap {
+  max-width: 500px;
+  padding-top: 9px;
+}
 .benefits-list {
+  width: 370px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .benefits-item {
@@ -251,6 +331,13 @@ img {
   border: 1px solid #000000;
   padding: 20px 24px;
   text-align: center;
+}
+.benefits-item:nth-child(odd) {
+  margin-right: 30px;
+}
+
+.benefits-item:nth-child(even) {
+  margin-top: 30px;
 }
 
 .benefits-item span {
@@ -278,6 +365,7 @@ img {
 .benefits-title {
   color: var(--second-title-color);
   margin-bottom: 20px;
+  max-width: 430px;
 }
 .benefits-after-title {
   font-size: 18px;
@@ -301,10 +389,15 @@ img {
   margin-bottom: 44px;
 }
 .barbers-list {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 30px;
 }
 
 .barbers-item {
+  width: calc((100% - 60px) / 3);
 }
+
 .barbers-item-title {
   font-weight: 400;
   font-size: 18px;
@@ -329,4 +422,115 @@ img {
 .gallery-pre-title {
   color: #303030;
   margin-bottom: 44px;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 30px; */
+  column-gap: 30px;
+  row-gap: 50px;
+}
+
+.gallery-item {
+  width: calc((100% - 90px) / 4);
+}
+
+.contact-wrap {
+  background-color: #303030;
+}
+
+.contact-wrap .container {
+  display: flex;
+  gap: 30px;
+}
+
+/* -------------ONLINE -------------*/
+
+.online {
+  padding-top: 130px;
+  width: calc((100% - 30px) / 2);
+}
+
+.online-title {
+  color: var(--first-title-color);
+}
+
+/* -------------CONTACTS -------------*/
+
+.contacts {
+  padding-top: 130px;
+  padding-bottom: 120px;
+  width: calc((100% - 30px) / 2);
+  padding-left: 100px;
+}
+.contacts-title {
+  color: var(--first-title-color);
+  margin-bottom: 40px;
+}
+.contacts-address {
+  margin-bottom: 70px;
+}
+.contacts-list {
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.contacts-item:first-child > .link {
+  font-weight: 700;
+}
+.contacts-link {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.contacts-subtitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.contacts-schedule {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+/* -------------FOOTER -------------*/
+
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+}
+.footer-copy {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #9da4bd;
+}
+.footer-list {
+  display: flex;
+  gap: 40px;
+  margin-left: auto;
+}
+.footer-item {
+}
+.footer-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #303030;
 }
